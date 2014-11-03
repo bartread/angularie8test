@@ -43,6 +43,7 @@ testDirectivesApp.directive("yesNoQuestion", function() {
 		},
 		restrict: "E",
 		replace: "true",
+		transclude: true,
 		templateUrl: "../views/directives/yes-no-question.html"
 	};
 });
@@ -57,6 +58,7 @@ testDirectivesApp.directive("radioButtonQuestion", function() {
 		},
 		restrict: "E",
 		replace: "true",
+		transclude: true,
 		templateUrl: "../views/directives/radio-button-question.html"
 	};
 });

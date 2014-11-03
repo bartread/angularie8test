@@ -1,15 +1,7 @@
-<div class="question">
-	{{questionText}}
-	<radio-button
-		id="{{questionId}}-answer-yes"
-		name="{{questionId}}-answer"
-		value="yes"
-		caption="Yes"
-		selection="selection"></radio-button>
-	<radio-button
-		id="{{questionId}}-answer-no"
-		name="{{questionId}}-answer"
-		value="no"
-		caption="No"
-		selection="selection"></radio-button>
-</div>
+<span>
+	<radio-button-question
+		question-id="{{questionId}}"
+		question-text="{{questionText}}"
+		selection="selection"
+		options="[{'value': 'yes', 'caption': 'Yes'}, {'value': 'no', 'caption': 'No'}]"><span ng-transclude></radio-button-question>
+</span>
