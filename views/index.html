@@ -1,12 +1,30 @@
 <!doctype html>
 <html>
 	<head>
+		<!--[if lte IE 8]>
+			<script>
+				document.createElement('ng-include');
+				document.createElement('ng-pluralize');
+				document.createElement('ng-view');
+
+				// Optionally these for CSS
+				document.createElement('ng:include');
+				document.createElement('ng:pluralize');
+				document.createElement('ng:view');
+
+				// Sexy custom tags
+				document.createElement('display-input');
+				document.createElement('radio-button-question');
+				document.createElement('yes-no-question');
+				document.createElement('radio-button');
+			</script>
+	    <![endif]-->
 		<title>Testing Angular directives</title>
 		<script type="text/javascript" src="..\scripts\lib\angular.min.js"></script>
 		<!--<script type="text/javascript" src="..\scripts\lib\angular-route.js"></script>-->
 		<script type="text/javascript" src="..\scripts\test-directives.js"></script>
 	</head>
-	<body ng-app="testDirectives">
+	<body id="ng-app" ng-app="testDirectives">
 		<div ng-controller="testDirectivesCtrl">
 			<div>
 				<label for="user-input1">
