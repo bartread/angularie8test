@@ -1,0 +1,10 @@
+<div class="question">
+	{{questionText}}
+
+	<radio-button ng-repeat="option in options track by $index"
+		id="{{questionId}}-answer-{{option.value}}"
+		name="{{questionId}}-answer"
+		value="{{option.value}}"
+		caption="{{option.caption}}"
+		selection="selection"></radio-button>
+</div>

@@ -5,7 +5,7 @@ var testDirectivesApp = angular.module("testDirectives", []);
 testDirectivesApp.controller(
 	"testDirectivesCtrl",
 	["$scope", "$http", "$log", function($scope, $http, $log) {
-		
+		$scope.policyType = "buildingsAndContents";
 	}]);
 
 testDirectivesApp.directive("displayInput", function() {
@@ -44,5 +44,19 @@ testDirectivesApp.directive("yesNoQuestion", function() {
 		restrict: "E",
 		replace: "true",
 		templateUrl: "../views/directives/yes-no-question.html"
+	};
+});
+
+testDirectivesApp.directive("radioButtonQuestion", function() {
+	return {
+		scope: {
+			questionId: "@questionId",
+			questionText: "@questionText",
+			selection: "=selection",
+			options: "=options"	
+		},
+		restrict: "E",
+		replace: "true",
+		templateUrl: "../views/directives/radio-button-question.html"
 	};
 });

@@ -22,7 +22,25 @@
 				</label>
 			</div>
 			<display-input user-input="userInput2"></display-input>
+
+			<h1>Your Policy</h1>
+
+			<radio-button-question
+				question-id="policy-type"
+				question-text="What type of home insurance policy would you like?"
+				selection="policyType"
+				options="[{'value': 'buildingsAndContents', 'caption' : 'Buildings &amp; Contents'}, {'value': 'buildings', 'caption': 'Buildings'}, {'value': 'contents', 'caption': 'Contents'}]"></radio-button-question>
+
+
+			<radio-button-question
+				question-id="payment-period"
+				question-text="How do you usually pay for your home insurance policy?"
+				selection="paymentPeriod"
+				options="[{'value': 'annual', 'caption': 'One annual payment'}, {'value': 'monthly', 'caption': 'Monthly installments'}]"></radio-button-question>
+
 			
+			<h1>About Your Property</h1>
+
 			<yes-no-question
 				question-id="tall-trees"
 				question-text="Are there any trees taller than 10 meters within 5 metres of your property?"
