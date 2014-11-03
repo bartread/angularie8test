@@ -10,6 +10,9 @@ testDirectivesApp.controller(
 
 testDirectivesApp.directive('displayInput', function() {
 	return {
+		scope: {
+			userInput: "=userInput"
+		},
 		restrict: "E",
 		replace: "true",
 		templateUrl: "../views/directives/display-input.html"
