@@ -5,7 +5,7 @@ var testDirectivesApp = angular.module("testDirectives", []);
 testDirectivesApp.controller(
 	"testDirectivesCtrl",
 	["$scope", "$http", "$log", function($scope, $http, $log) {
-		$scope.selection="yes"
+		
 	}]);
 
 testDirectivesApp.directive("displayInput", function() {
