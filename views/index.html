@@ -9,12 +9,20 @@
 	<body ng-app="testDirectives">
 		<div ng-controller="testDirectivesCtrl">
 			<div>
-				<label for="user-input">
-					Enter text:
-					<input id="user-input" type="text" ng-model="userInput"></input>
+				<label for="user-input1">
+					Enter text (1):
+					<input id="user-input1" type="text" ng-model="userInput1"></input>
 				</label>
 			</div>
-			Here's what you entered: {{userInput}}
+			<display-input></display-input>
+			<div>
+				<label for="user-input2">
+					Enter text (2):
+					<input id="user-input2" type="text" ng-model="userInput2"></input>
+				</label>
+			</div>
+			<display-input></display-input>
+			
 		</div>
 	</body>
 </html>

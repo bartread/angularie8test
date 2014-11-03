@@ -7,3 +7,11 @@ testDirectivesApp.controller(
 	["$scope", "$http", "$log", function($scope, $http, $log) {
 
 	}]);
+
+testDirectivesApp.directive('displayInput', function() {
+	return {
+		restrict: "E",
+		replace: "true",
+		templateUrl: "../views/directives/display-input.html"
+	};
+})
