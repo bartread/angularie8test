@@ -30,6 +30,7 @@ testDirectivesApp.directive("radioButton", function() {
 		},
 		restrict: "E",
 		replace: "true",
+		transclude: true,
 		templateUrl: "../views/directives/radio-button.html"
 	};
 });
