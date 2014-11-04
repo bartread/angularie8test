@@ -13,7 +13,7 @@ testDirectivesApp.directive("displayInput", function() {
 		scope: {
 			userInput: "=userInput",
 		},
-		restrict: "E",
+		restrict: "AE",
 		replace: "true",
 		templateUrl: "../views/directives/display-input.html"
 	};
@@ -28,7 +28,7 @@ testDirectivesApp.directive("radioButton", function() {
 			caption: "@caption",
 			selection: "=selection"
 		},
-		restrict: "E",
+		restrict: "AE",
 		replace: "true",
 		transclude: true,
 		templateUrl: "../views/directives/radio-button.html"
@@ -42,7 +42,7 @@ testDirectivesApp.directive("yesNoQuestion", function() {
 			questionText: "@questionText",
 			selection: "=selection"
 		},
-		restrict: "E",
+		restrict: "AE",
 		replace: "true",
 		transclude: true,
 		templateUrl: "../views/directives/yes-no-question.html"
@@ -57,7 +57,7 @@ testDirectivesApp.directive("radioButtonQuestion", function() {
 			selection: "=selection",
 			options: "=options"	
 		},
-		restrict: "E",
+		restrict: "AE",
 		replace: "true",
 		transclude: true,
 		templateUrl: "../views/directives/radio-button-question.html"
