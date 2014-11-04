@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<!--[if lte IE 8]>
+			<script>
+				document.createElement('ng-include');
+				document.createElement('ng-pluralize');
+				document.createElement('ng-view');
+
+				// Optionally these for CSS
+				document.createElement('ng:include');
+				document.createElement('ng:pluralize');
+				document.createElement('ng:view');
+
+				// Sexy custom tags
+				document.createElement('display-input');
+				document.createElement('radio-button-question');
+				document.createElement('yes-no-question');
+				document.createElement('radio-button');
+			</script>
+	    <![endif]-->
+		<title>Testing Angular directives</title>
+		<script type="text/javascript" src="..\scripts\lib\angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="..\scripts\lib\angular-route.js"></script>-->
+		<script type="text/javascript" src="..\scripts\test-directives.js"></script>
+	</head>
+	<body id="ng-app" ng-app="testDirectives">
+		<div ng-controller="testDirectivesCtrl">
+			<div>
+				<label for="user-input1">
+					Enter text (1):
+					<input id="user-input1" type="text" ng-model="userInput1"></input>
+				</label>
+			</div>
+			<display-input user-input="userInput1"></display-input>
+			<div>
+				<label for="user-input2">
+					Enter text (2):
+					<input id="user-input2" type="text" ng-model="userInput2"></input>
+				</label>
+			</div>
+			<display-input user-input="userInput2"></display-input>
+
+			<h1>Your Policy</h1>
+
+			<div radio-button-question
+				question-id="policy-type"
+				selection="policyType"
+				options="[{'value': 'buildingsAndContents', 'caption' : 'Buildings &amp; Contents'}, {'value': 'buildings', 'caption': 'Buildings'}, {'value': 'contents', 'caption': 'Contents'}]">
+				What type of home insurance policy would you like?
+			</div>
+
+
+			<div radio-button-question
+				question-id="payment-period"
+				selection="paymentPeriod"
+				options="[{'value': 'annual', 'caption': 'One annual payment'}, {'value': 'monthly', 'caption': 'Monthly installments'}]">
+				How do you usually pay for your home insurance policy?
+			</div>
+
+			
+			<h1>About Your Property</h1>
+
+			<div yes-no-question
+				question-id="tall-trees"
+				selection="hasTallTreesWithin5Metres">
+				Are there any trees taller than 10 meters within 5 metres of your property?
+			</div>
+
+			<div yes-no-question
+				question-id="subsidence"
+				selection="hasSufferedSubsidence">
+				Has the property ever suffered from subsidence or ground movement?
+			</div>
+
+			<div yes-no-question
+				question-id="cracks"
+				selection="hasCracks">
+				Has the property had any cracks on its external walls?
+			</div>
+
+			<div yes-no-question
+				question-id="underpinning"
+				selection="hasUnderpinning">
+				Has the property ever had any underpinning or structural support?
+			</div>
+
+			<div yes-no-question
+				question-id="continuing-damage"
+				selection="isContinuingToSufferDamage">
+				Is the property continuing to suffer from damage?
+			</div>
+
+			<div yes-no-question
+				question-id="flooding"
+				selection="hasBeenFlooded">
+				To the best of your knowledge has the property ever been flooded?
+			</div>
+
+			<div yes-no-question
+				question-id="close-to-water"
+				selection="isWithin400mOfWater">
+				Is the property within 400m (1/4 mile) of water?
+			</div>
+
+
+
+			<div yes-no-question
+				question-id="buildings-accidental-damage"
+				selection="addAccidentalDamageCover">
+				Would you like to add accidental damage cover for your buildings?
+			</div>
+		</div>
+
+	</body>
+</html>
